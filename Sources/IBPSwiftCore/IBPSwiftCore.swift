@@ -7,7 +7,7 @@ public class IBPSwiftCore {
     ///   - hexString: 6 digit hexadecimal string
     ///   - alpha: A number betwen 0.0 to 1 indicate how the transparent color is
     /// - Returns: UIColor defined by hexString and alpha parameters
-   internal class func colorFromHex(_ hexString: String, alpha: CGFloat = 1) -> UIColor {
+   public class func colorFromHex(_ hexString: String, alpha: CGFloat = 1) -> UIColor {
         let r, g, b: CGFloat
         let offset = hexString.hasPrefix("#") ? 1 : 0
         let start = hexString.index(hexString.startIndex, offsetBy: offset)

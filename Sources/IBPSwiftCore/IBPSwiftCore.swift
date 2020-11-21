@@ -1,13 +1,13 @@
 
 import UIKit
-class IBPSwiftCore {
+public class IBPSwiftCore {
     
     /// Alows you to convert a 6 digit hexadecimal string to UIColor instance
     /// - Parameters:
     ///   - hexString: 6 digit hexadecimal string
     ///   - alpha: A number betwen 0.0 to 1 indicate how the transparent color is
     /// - Returns: UIColor defined by hexString and alpha parameters
-    class func colorFromHex(_ hexString: String, alpha: CGFloat = 1) -> UIColor {
+   internal class func colorFromHex(_ hexString: String, alpha: CGFloat = 1) -> UIColor {
         let r, g, b: CGFloat
         let offset = hexString.hasPrefix("#") ? 1 : 0
         let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -23,4 +23,8 @@ class IBPSwiftCore {
         return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
     }
     
+    /// IBP color
+    public static var ibpColor : UIColor {
+        return  self.colorFromHex("006736")
+    }
 }

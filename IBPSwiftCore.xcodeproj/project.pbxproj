@@ -52,6 +52,7 @@
 		A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftCore.swift; sourceTree = "<group>"; };
 		A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftNetworkingTests.swift; sourceTree = "<group>"; };
 		A0EDF190256A8296003F4179 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A0EDF192256AEB59003F4179 /* IBPSwiftCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBPSwiftCore.podspec; sourceTree = "<group>"; };
 		"IBPSwiftCore::IBPSwiftCore::Product" /* IBPSwiftCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IBPSwiftCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"IBPSwiftCore::IBPSwiftCoreTests::Product" /* IBPSwiftCoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = IBPSwiftCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* IBPSwiftColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftColorTests.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
+				A0EDF192256AEB59003F4179 /* IBPSwiftCore.podspec */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,

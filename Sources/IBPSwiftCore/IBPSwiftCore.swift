@@ -27,4 +27,8 @@ public class IBPSwiftCore {
     public static var ibpColor : UIColor {
         return  self.colorFromHex("006736")
     }
+    
+    public static var secondIbpColor: UIColor {
+        return self.colorFromHex("FCFFFD")
+    }
 }

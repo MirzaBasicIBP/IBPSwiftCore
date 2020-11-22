@@ -12,6 +12,11 @@ final class IBPSwiftCoreTests: XCTestCase {
         let color = IBPSwiftCore.colorFromHex("006736")
         XCTAssertEqual(color, IBPSwiftCore.ibpColor)
     }
+    
+    func testSecondIBPSwioftColorAreEqual() {
+        let color = IBPSwiftCore.colorFromHex("FCFFFD")
+        XCTAssertEqual(color, IBPSwiftCore.secondIbpColor)
+    }
 
     static var allTests = [
         ("testColorRedEqual", testColorRedEqual),

@@ -9,11 +9,20 @@ import Foundation
 
 protocol NetworkSession {
     func get(from url: URL, completionsHandler: @escaping (Data?, Error?) -> Void)
+    func post(with request: URLRequest, completionsHandler: @escaping (Data?, Error?) -> Void)
 }
 
 extension URLSession: NetworkSession {
-    func get(from url: URL, completionsHandler: @escaping (Data?, Error?) -> Void) {
+   func get(from url: URL, completionsHandler: @escaping (Data?, Error?) -> Void) {
         let task = dataTask(with: url) {data, _, error in
+            completionsHandler(data, error)
+        }
+        
+        task.resume()
+    }
+    
+    func post(with request: URLRequest, completionsHandler: @escaping (Data?, Error?) -> Void) {
+        let task = dataTask(with: request) { (data, _, error) in
             completionsHandler(data, error)
         }
         
@@ -38,6 +47,27 @@ extension IBPSwiftCore {
                 session.get(from: url) {data, error in
                     let result = data.map(NetworkResult<Data>.success) ?? .failure(error)
                     completionHandler(result)
+                }
+            }
+            
+            /// Calls to the internet that send Data to a specific location
+            /// - Warning Make sure that url cant accept POST request
+            /// - Parameters:
+            ///   - url: The location to send data to
+            ///   - body: The object to send to requrst
+            ///   - completionHandler: Returns a result object with status of request
+            public func sendData<T: Codable>(to url: URL, body: T, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
+                var request = URLRequest(url: url)
+                do {
+                    let httpBody = try? JSONEncoder().encode(body)
+                    request.httpBody = httpBody
+                    request.httpMethod = "POST"
+                    session.post(with: request) { data, error in
+                        let result = data.map(NetworkResult<Data>.success) ?? .failure(error)
+                        completionHandler(result)
+                    }
+                } catch let error {
+                   return  completionHandler(.failure(error))
                 }
             }
         }

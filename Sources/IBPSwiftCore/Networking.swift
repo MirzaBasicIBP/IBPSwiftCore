@@ -59,7 +59,7 @@ extension IBPSwiftCore {
             public func sendData<T: Codable>(to url: URL, body: T, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
                 var request = URLRequest(url: url)
                 do {
-                    let httpBody = try? JSONEncoder().encode(body)
+                    let httpBody = try JSONEncoder().encode(body)
                     request.httpBody = httpBody
                     request.httpMethod = "POST"
                     session.post(with: request) { data, error in
@@ -67,7 +67,7 @@ extension IBPSwiftCore {
                         completionHandler(result)
                     }
                 } catch let error {
-                   return  completionHandler(.failure(error))
+                    return  completionHandler(.failure(error))
                 }
             }
         }

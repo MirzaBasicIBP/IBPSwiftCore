@@ -131,8 +131,8 @@
 		OBJ_8 /* IBPSwiftCore */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Color.swift */,
 				A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */,
+				OBJ_9 /* Color.swift */,
 				A0EDF190256A8296003F4179 /* Networking.swift */,
 			);
 			name = IBPSwiftCore;

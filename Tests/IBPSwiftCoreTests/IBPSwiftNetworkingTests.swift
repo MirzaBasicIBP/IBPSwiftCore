@@ -8,24 +8,34 @@
 import XCTest
 @testable import IBPSwiftCore
 
+class NetworkSessionMock: NetworkSession {
+    var data: Data?
+    var error: Error?
+    func get(from url: URL, completionsHandler: @escaping (Data?, Error?) -> Void) {
+        completionsHandler(data, error)
+    }
+}
+
 final class IBPSwiftNetworkingTests: XCTestCase {
 
 
     func testLoadDataCall() throws {
         let manager = IBPSwiftCore.Networking.Manager()
+        let session = NetworkSessionMock()
+        manager.session = session
+        
         let expetation = XCTestExpectation(description: "Caled for data")
-        guard let url = URL(string: "https://raywenderlich.com") else {
-            return XCTFail("Could not create URL properly")
-        }
+        let data = Data([0, 1, 0, 1])
+        let url = URL(fileURLWithPath: "url")
+        session.data = data
         
         manager.loadData(from: url) { result in
             expetation.fulfill()
             switch result {
                 case .success(let returnedData):
-                    XCTAssertNil(returnedData, "Response data is nul")
+                    XCTAssertEqual(data, returnedData, "manger returned unexpected data")
                 case .failure(let error):
                     XCTFail(error?.localizedDescription ?? "error forming error result")
-                
             }
         }
         wait(for: [expetation], timeout: 5)

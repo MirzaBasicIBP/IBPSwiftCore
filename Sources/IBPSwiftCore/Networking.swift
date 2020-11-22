@@ -6,6 +6,21 @@
 //
 
 import Foundation
+
+protocol NetworkSession {
+    func get(from url: URL, completionsHandler: @escaping (Data?, Error?) -> Void)
+}
+
+extension URLSession: NetworkSession {
+    func get(from url: URL, completionsHandler: @escaping (Data?, Error?) -> Void) {
+        let task = dataTask(with: url) {data, _, error in
+            completionsHandler(data, error)
+        }
+        
+        task.resume()
+    }
+}
+
 extension IBPSwiftCore {
     public class Networking {
         /// Responsible for handling all networking data
@@ -13,15 +28,17 @@ extension IBPSwiftCore {
         public class Manager {
             public init () {}
             
-            private let session = URLSession.shared
+            internal var session: NetworkSession = URLSession.shared
             
+            /// Calls to the internet that retrieve Data from specific location
+            /// - Parameters:
+            ///   - url: The location to fetch data from
+            ///   - completionHandler: Returns a result object with status of request
             public func loadData(from url: URL, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
-                let task = session.dataTask(with: url) {data, response, error in
-                    
+                session.get(from: url) {data, error in
                     let result = data.map(NetworkResult<Data>.success) ?? .failure(error)
                     completionHandler(result)
                 }
-                task.resume()
             }
         }
         

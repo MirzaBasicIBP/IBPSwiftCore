@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A0E2BDB0256C5A310077BADD /* IBPSwiftDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */; };
+		A0E2BDB2256C5C500077BADD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDB1256C5C500077BADD /* Date.swift */; };
 		A0EDF18D256A7D94003F4179 /* IBPSwiftCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */; };
 		A0EDF18F256A8178003F4179 /* IBPSwiftNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */; };
 		A0EDF191256A8296003F4179 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF190256A8296003F4179 /* Networking.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftDateTests.swift; sourceTree = "<group>"; };
+		A0E2BDB1256C5C500077BADD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftCore.swift; sourceTree = "<group>"; };
 		A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftNetworkingTests.swift; sourceTree = "<group>"; };
 		A0EDF190256A8296003F4179 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			children = (
 				OBJ_12 /* IBPSwiftColorTests.swift */,
 				A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */,
+				A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
 			name = IBPSwiftCoreTests;
@@ -109,7 +114,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				A0EDF192256AEB59003F4179 /* IBPSwiftCore.podspec */,
@@ -119,7 +124,6 @@
 				OBJ_14 /* Products */,
 				OBJ_17 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -136,6 +140,7 @@
 				A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */,
 				OBJ_9 /* Color.swift */,
 				A0EDF190256A8296003F4179 /* Networking.swift */,
+				A0E2BDB1256C5C500077BADD /* Date.swift */,
 			);
 			name = IBPSwiftCore;
 			path = Sources/IBPSwiftCore;
@@ -207,7 +212,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +233,7 @@
 				A0EDF191256A8296003F4179 /* Networking.swift in Sources */,
 				A0EDF18D256A7D94003F4179 /* IBPSwiftCore.swift in Sources */,
 				OBJ_23 /* Color.swift in Sources */,
+				A0E2BDB2256C5C500077BADD /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +252,7 @@
 				OBJ_41 /* IBPSwiftColorTests.swift in Sources */,
 				A0EDF18F256A8178003F4179 /* IBPSwiftNetworkingTests.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,
+				A0E2BDB0256C5A310077BADD /* IBPSwiftDateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

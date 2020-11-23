@@ -38,7 +38,7 @@ final class IBPSwiftNetworkingTests: XCTestCase {
         let url = URL(fileURLWithPath: "url")
         session.data = data
         
-        manager.loadData(from: url) { result in
+        manager.get(from: url) { result in
             expetation.fulfill()
             switch result {
                 case .success(let returnedData):
@@ -59,7 +59,7 @@ final class IBPSwiftNetworkingTests: XCTestCase {
         manager.session = session
         let url = URL(fileURLWithPath: "url")
         let expetation = XCTestExpectation(description: "Send data")
-        manager.sendData(to: url, body: sampleObject) { result in
+        manager.post(to: url, body: sampleObject) { result in
             expetation.fulfill()
             switch result {
             case .success(let returnedData):

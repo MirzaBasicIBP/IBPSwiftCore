@@ -43,7 +43,7 @@ extension IBPSwiftCore {
             /// - Parameters:
             ///   - url: The location to fetch data from
             ///   - completionHandler: Returns a result object with status of request
-            public func loadData(from url: URL, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
+            public func get(from url: URL, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
                 session.get(from: url) {data, error in
                     let result = data.map(NetworkResult<Data>.success) ?? .failure(error)
                     completionHandler(result)
@@ -56,7 +56,7 @@ extension IBPSwiftCore {
             ///   - url: The location to send data to
             ///   - body: The object to send to requrst
             ///   - completionHandler: Returns a result object with status of request
-            public func sendData<T: Codable>(to url: URL, body: T, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
+            public func post<T: Codable>(to url: URL, body: T, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
                 var request = URLRequest(url: url)
                 do {
                     let httpBody = try JSONEncoder().encode(body)

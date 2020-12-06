@@ -12,6 +12,8 @@ target 'IBPSwiftCore' do
   target 'IBPSwiftCoreTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Alamofire'
+    pod 'ObjectMapper'
   end
 
 end

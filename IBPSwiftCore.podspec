@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "IBPSwiftCore"
-  s.version      = "0.5.0"
+  s.version      = "0.6.0"
   s.summary      = "IBP company framework for sharing code."
 
   # This description is used to generate tags and improve search results.
@@ -134,6 +134,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+    s.dependency "Alamofire", "~> 5.4.0"
+    s.dependency "ObjectMapper", "~> 4.2.0"
 
 end

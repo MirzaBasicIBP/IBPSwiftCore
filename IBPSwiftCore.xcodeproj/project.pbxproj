@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		"IBPSwiftCore::IBPSwiftCorePackageTests::ProductTarget" /* IBPSwiftCorePackageTests */ = {
+		IBPSwiftCore::IBPSwiftCorePackageTests::ProductTarget /* IBPSwiftCorePackageTests */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = OBJ_32 /* Build configuration list for PBXAggregateTarget "IBPSwiftCorePackageTests" */;
 			buildPhases = (
@@ -33,7 +33,7 @@
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* IBPSwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IBPSwiftColorTests.swift */; };
 		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
-		OBJ_44 /* IBPSwiftCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "IBPSwiftCore::IBPSwiftCore::Product" /* IBPSwiftCore.framework */; };
+		OBJ_44 /* IBPSwiftCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = IBPSwiftCore::IBPSwiftCore::Product /* IBPSwiftCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,8 @@
 		B0ABE16A465E5A2BD9CF3A91 /* Pods_IBPSwiftCorePackageDescription.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBPSwiftCorePackageDescription.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAD2BBDC40520E7B50569F2 /* Pods-IBPSwiftCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCore/Pods-IBPSwiftCore.release.xcconfig"; sourceTree = "<group>"; };
 		FB22A30BABB047D75F728957 /* Pods-IBPSwiftCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCore/Pods-IBPSwiftCore.debug.xcconfig"; sourceTree = "<group>"; };
-		"IBPSwiftCore::IBPSwiftCore::Product" /* IBPSwiftCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBPSwiftCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"IBPSwiftCore::IBPSwiftCoreTests::Product" /* IBPSwiftCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = IBPSwiftCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		IBPSwiftCore::IBPSwiftCore::Product /* IBPSwiftCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IBPSwiftCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		IBPSwiftCore::IBPSwiftCoreTests::Product /* IBPSwiftCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = IBPSwiftCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* IBPSwiftColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftColorTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		OBJ_14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"IBPSwiftCore::IBPSwiftCoreTests::Product" /* IBPSwiftCoreTests.xctest */,
-				"IBPSwiftCore::IBPSwiftCore::Product" /* IBPSwiftCore.framework */,
+				IBPSwiftCore::IBPSwiftCoreTests::Product /* IBPSwiftCoreTests.xctest */,
+				IBPSwiftCore::IBPSwiftCore::Product /* IBPSwiftCore.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -196,7 +196,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"IBPSwiftCore::IBPSwiftCore" /* IBPSwiftCore */ = {
+		IBPSwiftCore::IBPSwiftCore /* IBPSwiftCore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_19 /* Build configuration list for PBXNativeTarget "IBPSwiftCore" */;
 			buildPhases = (
@@ -210,17 +210,16 @@
 			);
 			name = IBPSwiftCore;
 			productName = IBPSwiftCore;
-			productReference = "IBPSwiftCore::IBPSwiftCore::Product" /* IBPSwiftCore.framework */;
+			productReference = IBPSwiftCore::IBPSwiftCore::Product /* IBPSwiftCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"IBPSwiftCore::IBPSwiftCoreTests" /* IBPSwiftCoreTests */ = {
+		IBPSwiftCore::IBPSwiftCoreTests /* IBPSwiftCoreTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_37 /* Build configuration list for PBXNativeTarget "IBPSwiftCoreTests" */;
 			buildPhases = (
 				F7D13CAB1B3F5492ED4B745E /* [CP] Check Pods Manifest.lock */,
 				OBJ_40 /* Sources */,
 				OBJ_43 /* Frameworks */,
-				0CF17FBC8D9FD5A76EBB8915 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,10 +228,10 @@
 			);
 			name = IBPSwiftCoreTests;
 			productName = IBPSwiftCoreTests;
-			productReference = "IBPSwiftCore::IBPSwiftCoreTests::Product" /* IBPSwiftCoreTests.xctest */;
+			productReference = IBPSwiftCore::IBPSwiftCoreTests::Product /* IBPSwiftCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		"IBPSwiftCore::SwiftPMPackageDescription" /* IBPSwiftCorePackageDescription */ = {
+		IBPSwiftCore::SwiftPMPackageDescription /* IBPSwiftCorePackageDescription */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "IBPSwiftCorePackageDescription" */;
 			buildPhases = (
@@ -269,39 +268,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"IBPSwiftCore::IBPSwiftCore" /* IBPSwiftCore */,
-				"IBPSwiftCore::SwiftPMPackageDescription" /* IBPSwiftCorePackageDescription */,
-				"IBPSwiftCore::IBPSwiftCorePackageTests::ProductTarget" /* IBPSwiftCorePackageTests */,
-				"IBPSwiftCore::IBPSwiftCoreTests" /* IBPSwiftCoreTests */,
+				IBPSwiftCore::IBPSwiftCore /* IBPSwiftCore */,
+				IBPSwiftCore::SwiftPMPackageDescription /* IBPSwiftCorePackageDescription */,
+				IBPSwiftCore::IBPSwiftCorePackageTests::ProductTarget /* IBPSwiftCorePackageTests */,
+				IBPSwiftCore::IBPSwiftCoreTests /* IBPSwiftCoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CF17FBC8D9FD5A76EBB8915 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-IBPSwiftCoreTests/Pods-IBPSwiftCoreTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBPSwiftCoreTests/Pods-IBPSwiftCoreTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		644C4419F7AAF99AA1387846 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,12 +381,12 @@
 /* Begin PBXTargetDependency section */
 		OBJ_35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "IBPSwiftCore::IBPSwiftCoreTests" /* IBPSwiftCoreTests */;
+			target = IBPSwiftCore::IBPSwiftCoreTests /* IBPSwiftCoreTests */;
 			targetProxy = A0EDF166256985C2003F4179 /* PBXContainerItemProxy */;
 		};
 		OBJ_45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "IBPSwiftCore::IBPSwiftCore" /* IBPSwiftCore */;
+			target = IBPSwiftCore::IBPSwiftCore /* IBPSwiftCore */;
 			targetProxy = A0EDF165256985C1003F4179 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */

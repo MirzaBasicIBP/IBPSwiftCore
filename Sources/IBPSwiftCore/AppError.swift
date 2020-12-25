@@ -8,17 +8,17 @@
 import Foundation
 import Alamofire
 
-class AppError: Error {
-    let title: String
-    let message: String
+open class AppError: Error {
+    public let title: String
+    public let message: String
 
-    init(title: String, message: String) {
+    public init(title: String, message: String) {
         self.title = title
         self.message = message
     }
 }
 
-class ApiError: AppError {
+open class ApiError: AppError {
 
     /// The URL request sent to the server.
     public let request: URLRequest?
@@ -57,7 +57,7 @@ class ApiError: AppError {
         super.init(title: "", message: errorMessage)
     }
 
-    static func fromDataResponse<T>(response: DataResponse<T, AFError>) -> ApiError? {
+    public static func fromDataResponse<T>(response: DataResponse<T, AFError>) -> ApiError? {
         switch response.result {
         case .failure(let error):
             return ApiError(request: response.request,

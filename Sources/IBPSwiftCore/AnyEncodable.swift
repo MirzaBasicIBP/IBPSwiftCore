@@ -5,17 +5,17 @@
 //  Created by Mirza Basic on 06/12/2020.
 //
 
-struct AnyEncodable: Encodable {
-    let value: Encodable
+public struct AnyEncodable: Encodable {
+    public let value: Encodable
 
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         try value.encode(to: &container)
     }
 }
 
 extension Encodable {
-    func encode(to container: inout SingleValueEncodingContainer) throws {
+    public func encode(to container: inout SingleValueEncodingContainer) throws {
         try container.encode(self)
     }
 }

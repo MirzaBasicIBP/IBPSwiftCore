@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ApiClientConfig {
+open class ApiClientConfig {
     private var SERVER_URL: String?
     private var API_CLIENT: String?
     private var API_SECRET: String?
@@ -35,11 +35,10 @@ class ApiClientConfig {
     }
     
     
-    /// Set OAuth2Protocol and refresh token status code that will triger OAuth2Protocol delegate to refresh token
+    /// Set OAuth2Protocol  delegate to oweride OAuth2Protocol methods for Api request costumizations
     /// - Parameters:
     ///   - delegate: Delegate for `OAuth2Protocol`
-    ///   - refreshStatusCode: Default is `401`
-    func setOAuth2HandlerDelegate(_ delegate: OAuth2Protocol?, _ refreshStatusCode: Int = ApiClientConfig.sharedInstance().REFRESH_TOKEN_STATUS_CODE) {
+    public func setOAuth2HandlerDelegate(_ delegate: OAuth2Protocol?) {
         if let oAuth2Handler = oAuth2Handler {
             oAuth2Handler.delegate = delegate
         } else {
@@ -47,27 +46,27 @@ class ApiClientConfig {
         }
     }
     
-    func setServerUrl(_ url: String?) {
+    public func setServerUrl(_ url: String?) {
         self.SERVER_URL = url
     }
     
-    func setClientId(_ clientId: String?)  {
+    public func setClientId(_ clientId: String?)  {
         self.API_CLIENT = clientId
     }
     
-    func setApiSecret(_ secret: String?)  {
+    public func setApiSecret(_ secret: String?)  {
         self.API_SECRET = secret
     }
     
-    func setValidStatusCodeRange(_ range: Range<Int>)  {
+    public func setValidStatusCodeRange(_ range: Range<Int>)  {
         self.VALID_STATUS_CODES = range
     }
     
-    func setTimeoutInterval(_ interval: TimeInterval) {
+    public func setTimeoutInterval(_ interval: TimeInterval) {
         self.TIMEOUT_INTERVAL = interval
     }
     
-    func setRefreshTokenStatusCode(_ code: Int) {
+    public func setRefreshTokenStatusCode(_ code: Int) {
         self.REFRESH_TOKEN_STATUS_CODE = code
     }
     
@@ -76,44 +75,44 @@ class ApiClientConfig {
     /// - Parameters:
     ///   - accept: Default is `application/json`
     ///   - contentType: Default is `application/json`
-    func setHeader(accept: String?, contentType: String?) {
+    public func setHeader(accept: String?, contentType: String?) {
         self.HEADER_ACCEPT = accept
         self.HEADER_CONTENT_TYPE = contentType
     }
     
-    var oAuth2handler: OAuth2Handler? {
+    public var oAuth2handler: OAuth2Handler? {
         return oAuth2Handler
     }
 
-    var serverUrl: String? {
+    public var serverUrl: String? {
         return SERVER_URL
     }
 
-    var apiClient: String? {
+    public var apiClient: String? {
         return API_CLIENT
     }
 
-    var apiSecret: String? {
+    public var apiSecret: String? {
         return API_SECRET
     }
     
-    var validStatusCodes: Range<Int> {
+    public var validStatusCodes: Range<Int> {
         return VALID_STATUS_CODES
     }
     
-    var timeoutInterval: TimeInterval {
+    public var timeoutInterval: TimeInterval {
         return TIMEOUT_INTERVAL
     }
     
-    var refreshTokenStatusCode: Int {
+    public var refreshTokenStatusCode: Int {
         return REFRESH_TOKEN_STATUS_CODE
     }
     
-    var getHeaderAccept: String? {
+    public var getHeaderAccept: String? {
         return HEADER_ACCEPT
     }
     
-    var getHeaderContentType: String? {
+    public var getHeaderContentType: String? {
         return HEADER_CONTENT_TYPE
     }
 }

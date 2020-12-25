@@ -9,12 +9,12 @@ import Foundation
 import Alamofire
 
 
-class ApiClient {
-    static var apiConfig = ApiClientConfig.sharedInstance()
+open class ApiClient {
+    public static var apiConfig = ApiClientConfig.sharedInstance()
     
     
     /// Manager with configuration for request headers and Oauth2Handler interceptor if it is available in ApiClientConfig
-    static let sessionManager: Session = {
+    public static let sessionManager: Session = {
         var defaultHeaders = HTTPHeaders.default
         if let contentType = apiConfig.getHeaderContentType {
             defaultHeaders.add(HTTPHeader.contentType(contentType))
@@ -38,7 +38,7 @@ class ApiClient {
     /// - Parameter path: `String` path to specific location.
     /// - Returns: `URL` with full path to specific location.
     
-    func buildUrl(_ path: String) -> URL {
+     public func buildUrl(_ path: String) -> URL {
         if let serverUrl = ApiClient.apiConfig.serverUrl {
             var url = URL(string: serverUrl)!
             url.appendPathComponent(path)
@@ -60,7 +60,7 @@ class ApiClient {
     ///   - headers: `HTTPHeaders` value to be added to the `URLRequest`. `nil` by default.
     ///   - decoder: `DataDecoder` to be used to decode the response data. `JSONDecoder()` by default.
     ///   - callback: `@escaping (ResponseModel?, ApiError?) -> Void` Calback that will return data or error from the response
-    func makeRequest<ResponseModel: Decodable>(
+    public func makeRequest<ResponseModel: Decodable>(
         using httpMethod: HTTPMethod,
         body: Encodable?,
         path: String,

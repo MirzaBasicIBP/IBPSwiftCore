@@ -33,7 +33,6 @@
 		A041624D257D659100375E26 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041624C257D659100375E26 /* KeyChainHelper.swift */; };
 		A0E2BDB0256C5A310077BADD /* IBPSwiftDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */; };
 		A0E2BDB2256C5C500077BADD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDB1256C5C500077BADD /* DateExtension.swift */; };
-		A0EDF18D256A7D94003F4179 /* IBPSwiftCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */; };
 		EC7A4BF22CB5954059051B0D /* Pods_IBPSwiftCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576EB7D84EA7FE9D92191FC6 /* Pods_IBPSwiftCore.framework */; };
 		OBJ_23 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* UIColorExtension.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -74,7 +73,6 @@
 		A041624C257D659100375E26 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
 		A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftDateTests.swift; sourceTree = "<group>"; };
 		A0E2BDB1256C5C500077BADD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftCore.swift; sourceTree = "<group>"; };
 		A0EDF192256AEB59003F4179 /* IBPSwiftCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBPSwiftCore.podspec; sourceTree = "<group>"; };
 		A65D2F72363DC845FD029CE9 /* Pods-IBPSwiftCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCoreTests/Pods-IBPSwiftCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6DF6D2F0171A2AD6679B04 /* Pods-IBPSwiftCorePackageDescription.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCorePackageDescription.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCorePackageDescription/Pods-IBPSwiftCorePackageDescription.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 				A0FE52C92596137900C7EBB2 /* Helpers */,
 				A0FE52C82596137000C7EBB2 /* Extensions */,
 				A0FE52C62596133800C7EBB2 /* Networking */,
-				A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */,
 			);
 			name = IBPSwiftCore;
 			path = Sources/IBPSwiftCore;
@@ -417,7 +414,6 @@
 				A0416249257D654F00375E26 /* EncodableExtension.swift in Sources */,
 				A0416243257D643F00375E26 /* AnyEncodable.swift in Sources */,
 				A041624D257D659100375E26 /* KeyChainHelper.swift in Sources */,
-				A0EDF18D256A7D94003F4179 /* IBPSwiftCore.swift in Sources */,
 				A041624B257D657200375E26 /* DataExtension.swift in Sources */,
 				OBJ_23 /* UIColorExtension.swift in Sources */,
 				A041623D257D611A00375E26 /* OAuth2Handler.swift in Sources */,

@@ -58,7 +58,7 @@ extension OAuth2Protocol {
     }
 }
 
-class OAuth2Handler: RequestInterceptor {
+open class OAuth2Handler: RequestInterceptor {
     private var sessionManager: Session {
         return ApiClient.sessionManager
     }
@@ -74,17 +74,17 @@ class OAuth2Handler: RequestInterceptor {
         
     }
     
-    init(delegate: OAuth2Protocol?) {
+    public init(delegate: OAuth2Protocol?) {
         self.delegate = delegate
     }
 
-    func adapt(_ urlRequest: URLRequest,
+    public func adapt(_ urlRequest: URLRequest,
                for session: Session,
                completion: @escaping (Result<URLRequest, Error>) -> Void) {
         self.delegate?.onAdaptRequest(urlRequest, for: session, completion: completion)
     }
 
-    func retry(_ request: Request,
+    public func retry(_ request: Request,
                for session: Session,
                dueTo error: Error,
                completion: @escaping (RetryResult) -> Void) {

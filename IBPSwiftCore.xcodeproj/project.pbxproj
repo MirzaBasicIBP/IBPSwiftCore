@@ -23,13 +23,19 @@
 /* Begin PBXBuildFile section */
 		150D6623869BDAF10F3332DF /* Pods_IBPSwiftCorePackageDescription.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ABE16A465E5A2BD9CF3A91 /* Pods_IBPSwiftCorePackageDescription.framework */; };
 		84137F51B47437EE7A640E59 /* Pods_IBPSwiftCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6B1C2782485BAD2E80A930 /* Pods_IBPSwiftCoreTests.framework */; };
+		A041623B257D60C000375E26 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041623A257D60C000375E26 /* ApiClient.swift */; };
+		A041623D257D611A00375E26 /* OAuth2Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041623C257D611A00375E26 /* OAuth2Handler.swift */; };
+		A041623F257D61BA00375E26 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041623E257D61BA00375E26 /* AppError.swift */; };
+		A0416241257D62B400375E26 /* ApiClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0416240257D62B400375E26 /* ApiClientConfig.swift */; };
+		A0416243257D643F00375E26 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0416242257D643F00375E26 /* AnyEncodable.swift */; };
+		A0416249257D654F00375E26 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0416248257D654F00375E26 /* EncodableExtension.swift */; };
+		A041624B257D657200375E26 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041624A257D657200375E26 /* DataExtension.swift */; };
+		A041624D257D659100375E26 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A041624C257D659100375E26 /* KeyChainHelper.swift */; };
 		A0E2BDB0256C5A310077BADD /* IBPSwiftDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */; };
-		A0E2BDB2256C5C500077BADD /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDB1256C5C500077BADD /* Date.swift */; };
+		A0E2BDB2256C5C500077BADD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2BDB1256C5C500077BADD /* DateExtension.swift */; };
 		A0EDF18D256A7D94003F4179 /* IBPSwiftCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */; };
-		A0EDF18F256A8178003F4179 /* IBPSwiftNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */; };
-		A0EDF191256A8296003F4179 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDF190256A8296003F4179 /* Networking.swift */; };
 		EC7A4BF22CB5954059051B0D /* Pods_IBPSwiftCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576EB7D84EA7FE9D92191FC6 /* Pods_IBPSwiftCore.framework */; };
-		OBJ_23 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Color.swift */; };
+		OBJ_23 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* UIColorExtension.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* IBPSwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* IBPSwiftColorTests.swift */; };
 		OBJ_42 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
@@ -58,11 +64,17 @@
 		576EB7D84EA7FE9D92191FC6 /* Pods_IBPSwiftCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBPSwiftCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6B1C2782485BAD2E80A930 /* Pods_IBPSwiftCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBPSwiftCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9C67A029C98D903874F80B /* Pods-IBPSwiftCorePackageDescription.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCorePackageDescription.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCorePackageDescription/Pods-IBPSwiftCorePackageDescription.debug.xcconfig"; sourceTree = "<group>"; };
+		A041623A257D60C000375E26 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		A041623C257D611A00375E26 /* OAuth2Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Handler.swift; sourceTree = "<group>"; };
+		A041623E257D61BA00375E26 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A0416240257D62B400375E26 /* ApiClientConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientConfig.swift; sourceTree = "<group>"; };
+		A0416242257D643F00375E26 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		A0416248257D654F00375E26 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		A041624A257D657200375E26 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		A041624C257D659100375E26 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
 		A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftDateTests.swift; sourceTree = "<group>"; };
-		A0E2BDB1256C5C500077BADD /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		A0E2BDB1256C5C500077BADD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftCore.swift; sourceTree = "<group>"; };
-		A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBPSwiftNetworkingTests.swift; sourceTree = "<group>"; };
-		A0EDF190256A8296003F4179 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		A0EDF192256AEB59003F4179 /* IBPSwiftCore.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBPSwiftCore.podspec; sourceTree = "<group>"; };
 		A65D2F72363DC845FD029CE9 /* Pods-IBPSwiftCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCoreTests/Pods-IBPSwiftCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6DF6D2F0171A2AD6679B04 /* Pods-IBPSwiftCorePackageDescription.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBPSwiftCorePackageDescription.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBPSwiftCorePackageDescription/Pods-IBPSwiftCorePackageDescription.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +87,7 @@
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		OBJ_9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +142,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A0474178257D78AA00640134 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0416242257D643F00375E26 /* AnyEncodable.swift */,
+				A041623E257D61BA00375E26 /* AppError.swift */,
+				A041623C257D611A00375E26 /* OAuth2Handler.swift */,
+				A0416240257D62B400375E26 /* ApiClientConfig.swift */,
+				A041623A257D60C000375E26 /* ApiClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A0DA103F258D1E1500ED4B50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A041624A257D657200375E26 /* DataExtension.swift */,
+				A0E2BDB1256C5C500077BADD /* DateExtension.swift */,
+				OBJ_9 /* UIColorExtension.swift */,
+				A0416248257D654F00375E26 /* EncodableExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0FE52952596069900C7EBB2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A041624C257D659100375E26 /* KeyChainHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* IBPSwiftColorTests.swift */,
-				A0EDF18E256A8178003F4179 /* IBPSwiftNetworkingTests.swift */,
 				A0E2BDAF256C5A310077BADD /* IBPSwiftDateTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
@@ -184,10 +226,10 @@
 		OBJ_8 /* IBPSwiftCore */ = {
 			isa = PBXGroup;
 			children = (
+				A0FE52952596069900C7EBB2 /* Helpers */,
+				A0DA103F258D1E1500ED4B50 /* Extensions */,
+				A0474178257D78AA00640134 /* Networking */,
 				A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */,
-				OBJ_9 /* Color.swift */,
-				A0EDF190256A8296003F4179 /* Networking.swift */,
-				A0E2BDB1256C5C500077BADD /* Date.swift */,
 			);
 			name = IBPSwiftCore;
 			path = Sources/IBPSwiftCore;
@@ -371,10 +413,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				A0EDF191256A8296003F4179 /* Networking.swift in Sources */,
+				A0416241257D62B400375E26 /* ApiClientConfig.swift in Sources */,
+				A0416249257D654F00375E26 /* EncodableExtension.swift in Sources */,
+				A0416243257D643F00375E26 /* AnyEncodable.swift in Sources */,
+				A041624D257D659100375E26 /* KeyChainHelper.swift in Sources */,
 				A0EDF18D256A7D94003F4179 /* IBPSwiftCore.swift in Sources */,
-				OBJ_23 /* Color.swift in Sources */,
-				A0E2BDB2256C5C500077BADD /* Date.swift in Sources */,
+				A041624B257D657200375E26 /* DataExtension.swift in Sources */,
+				OBJ_23 /* UIColorExtension.swift in Sources */,
+				A041623D257D611A00375E26 /* OAuth2Handler.swift in Sources */,
+				A0E2BDB2256C5C500077BADD /* DateExtension.swift in Sources */,
+				A041623B257D60C000375E26 /* ApiClient.swift in Sources */,
+				A041623F257D61BA00375E26 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +440,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_41 /* IBPSwiftColorTests.swift in Sources */,
-				A0EDF18F256A8178003F4179 /* IBPSwiftNetworkingTests.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,
 				A0E2BDB0256C5A310077BADD /* IBPSwiftDateTests.swift in Sources */,
 			);

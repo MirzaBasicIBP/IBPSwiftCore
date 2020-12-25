@@ -10,10 +10,9 @@ import XCTest
 
 class IBPSwiftDateTests: XCTestCase {
 
-
     func testUtcFirstDateOn1970() throws {
         let date = Date(timeIntervalSince1970: 0).utcString()
-        XCTAssertEqual(date, IBPSwiftCore.DateCore.utcFirstDateOn1970)
+        XCTAssertEqual(date, Date.utcFirstDateOn1970)
     }
 
     static var allTests = [("testUtcFirstDateOn1970", testUtcFirstDateOn1970)]

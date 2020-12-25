@@ -4,18 +4,18 @@ import XCTest
 final class IBPSwiftColorTests: XCTestCase {
     
     func testColorRedEqual() {
-        let color = IBPSwiftCore.Color.fromHex("#FF0000")
+        let color = UIColor.fromHex("#FF0000")
         XCTAssertEqual(color, .red)
     }
     
     func testIBPSwiftColorAreEqual() {
-        let color = IBPSwiftCore.Color.fromHex("006736")
-        XCTAssertEqual(color, IBPSwiftCore.Color.ibpColor)
+        let color = UIColor.fromHex("006736")
+        XCTAssertEqual(color, UIColor.ibpColor)
     }
     
     func testSecondIBPSwioftColorAreEqual() {
-        let color = IBPSwiftCore.Color.fromHex("FCFFFD")
-        XCTAssertEqual(color, IBPSwiftCore.Color.secondIbpColor)
+        let color = UIColor.fromHex("FCFFFD")
+        XCTAssertEqual(color, UIColor.secondIbpColor)
     }
 
     static var allTests = [

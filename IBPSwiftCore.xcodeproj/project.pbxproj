@@ -142,7 +142,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A0474178257D78AA00640134 /* Networking */ = {
+		A0FE52C62596133800C7EBB2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				A0416242257D643F00375E26 /* AnyEncodable.swift */,
@@ -151,10 +151,10 @@
 				A0416240257D62B400375E26 /* ApiClientConfig.swift */,
 				A041623A257D60C000375E26 /* ApiClient.swift */,
 			);
-			path = Networking;
+			name = Networking;
 			sourceTree = "<group>";
 		};
-		A0DA103F258D1E1500ED4B50 /* Extensions */ = {
+		A0FE52C82596137000C7EBB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				A041624A257D657200375E26 /* DataExtension.swift */,
@@ -162,15 +162,15 @@
 				OBJ_9 /* UIColorExtension.swift */,
 				A0416248257D654F00375E26 /* EncodableExtension.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
-		A0FE52952596069900C7EBB2 /* Helpers */ = {
+		A0FE52C92596137900C7EBB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				A041624C257D659100375E26 /* KeyChainHelper.swift */,
 			);
-			path = Helpers;
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -226,9 +226,9 @@
 		OBJ_8 /* IBPSwiftCore */ = {
 			isa = PBXGroup;
 			children = (
-				A0FE52952596069900C7EBB2 /* Helpers */,
-				A0DA103F258D1E1500ED4B50 /* Extensions */,
-				A0474178257D78AA00640134 /* Networking */,
+				A0FE52C92596137900C7EBB2 /* Helpers */,
+				A0FE52C82596137000C7EBB2 /* Extensions */,
+				A0FE52C62596133800C7EBB2 /* Networking */,
 				A0EDF18C256A7D94003F4179 /* IBPSwiftCore.swift */,
 			);
 			name = IBPSwiftCore;
